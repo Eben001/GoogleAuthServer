@@ -7,10 +7,11 @@ val koinVersion: String by project
 plugins {
     kotlin("jvm") version "1.8.21"
     id("io.ktor.plugin") version "2.3.0"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.8.21"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.21"
 }
 
-group = "com.example"
+
+group = "com.gana.ebenezer"
 version = "0.0.1"
 application {
     mainClass.set("io.ktor.server.netty.EngineMain")
@@ -18,7 +19,9 @@ application {
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
-
+tasks.create("stage"){
+    dependsOn("installDist")
+}
 
 repositories {
     mavenCentral()

@@ -1,1 +1,1 @@
-rootProject.name = "com.example.googleauthserverapp"
+rootProject.name = "com.gana.ebenezer.googleauthserverapp"

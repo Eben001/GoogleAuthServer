@@ -1,2 +1,2 @@
-web: build/install/com.gana.ebenezer/bin/com.gana.ebenezer
+web: build/install/com.example.googleauthserverapp/bin/com.example.googleauthserverapp
 worker: python scheduler.py
